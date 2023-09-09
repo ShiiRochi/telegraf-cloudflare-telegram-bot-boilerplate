@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"plugin:prettier/recommended",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		"@typescript-eslint"
+	],
+	"rules": {
+		"@typescript-eslint/ban-ts-comment": 1
+	},
+	"root": true
+}

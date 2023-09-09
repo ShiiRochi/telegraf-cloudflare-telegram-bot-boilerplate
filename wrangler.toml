@@ -1,0 +1,8 @@
+name = "telegraf-cloudflare-telegram-bot-boilerplate"
+main = "dist/index.ts"
+env = { }
+
+[triggers]
+crons = [ ]
+
+[vars]

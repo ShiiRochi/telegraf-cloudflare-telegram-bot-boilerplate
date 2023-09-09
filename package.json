@@ -1,0 +1,34 @@
+{
+  "name": "telegraf-cloudflare-telegram-bot-boilerplate",
+  "version": "0.0.0",
+  "private": false,
+  "scripts": {
+    "setup": "npm install -g wrangler",
+    "postsetup": "wrangler login",
+    "predeploy": "webpack -c webpack.config.js",
+    "prestart": "webpack -c webpack.config.js",
+    "deploy": "wrangler deploy dist/worker.js",
+    "start": "wrangler dev dist/worker.js --port 8443 --local-protocol https",
+    "set-webhook": "ts-node set-webhook.ts"
+  },
+  "dependencies": {
+    "@cfworker/web": "^1.14.0",
+    "cfworker-middleware-telegraf": "^2.0.2",
+    "telegraf": "^4.13.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "prettier": "3.0.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
